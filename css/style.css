@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* project Colors */
+    --dark-blue: #0d3d6b;
+    --blue-sky: #38c0e7;
+    /*old colors*/
+    --main-color: #333;
+    --yellow: #ffc800;
+    --pink: #ffb2bf;
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #b3b3b3;
+    --main-bg: #f2f2f2;/* icon bg */
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid var(--input-border);
+}
+header .search input::placeholder {
+    color: var(--input-border);
+}
+header .search i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    opacity: .75;
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+/* start landing*/
+@media (max-width: 767px) {
+    .landing .container .info {
+        order: 2;
+    }
+    .landing .container .image {
+        order: 1;
+    }
+}
+
+.landing .container .info .about-link:hover {
+    background-color: var(--dark-blue);
+}
+.landing .container .info .work-link:hover {
+    background-color: var(--blue-sky);
+    color: white;
+}
+/* end landing */
+
+/* start insurance*/
+.insurance .container h2 {
+    max-width: 600px;
+}
+.insurance .container .offers {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.insurance .container .offers .offer:hover {
+    background-color: var(--blue-sky);
+}
+.insurance .container .offers .offer:hover a {
+    background-color: var(--dark-blue);
+    border-color: white;
+}
+.insurance .container .offers .offer a:hover {
+    background-color: var(--blue-sky);
+    border-color: white;
+}
+/* end insurance */
+
+/* start our-mission*/
+@media (min-width: 768px) {
+    .our-mission .container > div {
+        width: calc(50% - 15px);
+    }
+}
+/* end our-mission */
+
+/* start our-strategy  */
+@media (min-width: 768px) {
+    .our-strategy .container .with-illus > div {
+        width: calc(50% - 15px);
+    }
+}
+/* end our-strategy  */
+
+/* start services*/
+.services .our-services {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.services .our-services .service:hover {
+    background-color: var(--blue-sky);
+}
+.services .our-services .service:hover i {
+    color: var(--dark-blue);
+}
+/* end services */
+
+/* start information-security */
+@media (min-width: 768px) {
+    .information-security .container > div {
+        width: calc(50% - 15px);
+    }
+}
+@media (max-width: 767px) {
+    .information-security .container .phone-number {
+        justify-content: center;
+    }
+}
+/* end information-security */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+/* end footer */
